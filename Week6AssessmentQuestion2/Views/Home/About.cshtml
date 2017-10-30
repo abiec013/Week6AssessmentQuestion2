@@ -1,0 +1,30 @@
+﻿@{
+    ViewBag.Title = "About";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+@model Week6AssessmentQuestion2.Models.Order
+<p>Use this area to provide additional information.</p>
+
+<th>Orders</th>
+<br />
+<table class="table">
+    <tr>
+        <th>OrderID</th>
+        <th>CustomerID</th>
+        <th>EmployeeID</th>
+
+    </tr>
+    @foreach (var element in ViewBag.Clist)
+    {
+        <tr>
+            <td>@element.OrderID</td>
+            <td>@element.CustomerID</td>
+            <td>@element.EmployeeID</td>
+           
+
+
+        </tr>
+
+    }
+</table>
